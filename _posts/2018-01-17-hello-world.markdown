@@ -13,6 +13,7 @@ Dados, algoritmos e desenhos de mecanismos.
 
 Algumas ideias iniciais para os primeiros posts:
 
+- Divisão em datasets de treino e teste
 - Árvore de decisão debaixo do capô
 - Ensemble
 - Random Forest
