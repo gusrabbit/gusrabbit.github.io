@@ -24,7 +24,7 @@ email: gustavosfcoelho@gmail.com
 discus-identifier: gusrabbit
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-112773626-1
 
 # Build Settings
 markdown: kramdown
