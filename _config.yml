@@ -3,6 +3,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Data Science Blog to share insights about what I am learning.
   Main interests include Machine Learning, Game Theory and Mechanism Design.
   This blog is mostly in Portuguese to help spread DS knowledge among Portuguese speakers.
+  Thanks to [Jessica Temporal](http://jtemporal.com) for her [tutorial](http://jtemporal.com/do-tema-ao-ar/), without her i wouldn't have a website.
+  Eu fiz esse site com o [tutorial genial](http://jtemporal.com/do-tema-ao-ar/) da [Jessica Temporal](http://jtemporal.com): Valeu Jess!
   
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
