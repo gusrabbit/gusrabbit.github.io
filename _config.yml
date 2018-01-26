@@ -15,7 +15,12 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Gustavo Coelho
 author-img: gustavo-coelho.jpg # add your photo
-about-author: I am a Data Scientist with background in economics in search for interesting algorithms and insights. # add description
+about-author: I am a Data Scientist with background in economics in search for interesting algorithms and insights.
+  Data Science Blog to share insights about what I am learning.
+  Main interests include Machine Learning, Game Theory and Mechanism Design.
+  This blog is mostly in Portuguese to help spread DS knowledge among Portuguese speakers.
+  Thanks to [Jessica Temporal](http://jtemporal.com) for her [tutorial](http://jtemporal.com/do-tema-ao-ar/), without her i wouldn't have a website.
+  Eu fiz esse site com o [tutorial genial](http://jtemporal.com/do-tema-ao-ar/) da [Jessica Temporal](http://jtemporal.com): Valeu Jess!# add description
 twitter: gusrabbit
 facebook: gustavosfcoelho
 github: gusrabbit 
