@@ -15,7 +15,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Gustavo Coelho
 author-img: gustavo-coelho.jpg # add your photo
-about-author: I am a Data Scientist with background in economics in search for interesting algorithms and insights. Thanks to Jessica Temporal for her tutorial: http://jtemporal.com/do-tema-ao-ar/, without her i wouldn't have a website.
+about-author: I am a Data Scientist with background in economics in search for interesting algorithms and insights. Thanks to Jessica Temporal for her tutorial (http://jtemporal.com/do-tema-ao-ar/), without her i wouldn't have a website.
 
 twitter: gusrabbit
 facebook: gustavosfcoelho
