@@ -1445,4 +1445,6 @@ a.newer-posts:hover {
   .post .post-content .post-title a {
     font-size: 21px;
   }
+  .post .article-page { width: 100%
+  }
 }
