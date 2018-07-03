@@ -52,8 +52,8 @@ Nós queremos dividir aleatoriamente em duas partes,
 para que elas representem bem o nosso dataset. E olha só que beleza! A biblioteca 
 scikit-learn já tem uma função pronta pra isso! Basta escrever o código a seguir:
 
-{% highlight python %}
 
+```python
 import pandas as pd
 
 train = pd.read_csv('train.csv')
@@ -66,7 +66,7 @@ x_train, x_test, y_train, y_test = train_test_split(train.drop('Survived',
                                                     test_size=0.3,
                                                     random_state=42)
 	
-{% endhighlight %}
+```
 
 Nesse código importamos a biblioteca pandas na primeira linha. Na segunda, pedimos que ela leia o arquivo train.csv e transforme num Data Frame com nome train.
 
