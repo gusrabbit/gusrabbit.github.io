@@ -18,7 +18,7 @@ Nesse caso, temos duas opções:
 1. Classificar cada ponto dos nossos dados com o que queremos prever, como "bom" ou "ruim" etc.
 2. Deixar os dados falarem por si só.
 
-Eu considerdo a opção 1 ruim por alguns motivos:
+Eu considero a opção 1 ruim por alguns motivos:
 
 - Se o for uma quantidade de dados grande dá trabalho.
 - Mesmo que que haja um critério objetivo de classificação podem haver problemas na classificação humana.
@@ -31,9 +31,9 @@ Nesse post vamos discutir sobre a opção 2. Essa opção representa a área de 
 Existem várias técnicas de [agrupamento](http://scikit-learn.org/stable/modules/clustering.html). Elas basicamente agrupam os dados de acordo com sua proximidade no espaço vetorial. Se X está mais perto de Z do que de Y, X e Z pertecerão ao grupo 1 enquanto Y ao grupo 2. É fácil pensar nesse exemplo em apenas uma dimensão:
 
 ![one dimensional clustering](https://planspace.org/20150520-practical_mergic/img/one_dimensional.png)
-Fonte: https://planspace.org/20150520-practical_mergic
+[Fonte da figura](https://planspace.org/20150520-practical_mergic)
 
-A ideia é que os pontos sejam semelhantes aos dentro do mesmo grupo e diferentes dos de outros grupos. Os vários métodos de agrupamento buscam minizar a distância entre os pontos do mesmo grupo maximizando a distância entre os diferentes grupos de várias formas diferentes. Se um post discutindo alguns desses algoritmos lhe interessa deixe um comentário! Quem sabe eu penso no seu caso ;P.
+A ideia é que os pontos sejam semelhantes aqueles dentro do mesmo grupo e diferentes aos pertencentes a outros grupos. Os vários métodos de agrupamento buscam minimizar a distância entre os pontos do mesmo grupo maximizando a distância entre os diferentes grupos de várias formas diferentes. Se um post discutindo alguns desses algoritmos lhe interessa deixe um comentário!
 
 ## Redução de dimensionalidade ([PCA](http://scikit-learn.org/stable/modules/decomposition.html#principal-component-analysis-pca), [FA](http://scikit-learn.org/stable/modules/decomposition.html#factor-analysis))
 
