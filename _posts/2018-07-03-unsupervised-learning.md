@@ -2,7 +2,7 @@
 layout: post
 title: "Aprendizado não supervisionado"
 date: 2018-07-02 10:00:00 -0300
-description: Como agrupar dados.
+description: O que é, qual a diferença do aprendizado supervisionado e alguns exemplos.
 img: unsupervised.jpeg
 tags: [aprendizado não supervisionado, unsupervised learning, unsupervised, pca, cluster]
 ---
