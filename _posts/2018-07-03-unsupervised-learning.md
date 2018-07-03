@@ -1,74 +1,49 @@
 ---
 layout: post
-title: "Clusters/ Agrupamento"
+title: "Aprendizado não supervisionado"
 date: 2018-07-02 10:00:00 -0300
 description: Como agrupar dados.
-img: 
-tags: [Train-test]
+img: unsupervised.jpeg
+tags: [aprendizado não supervisionado, unsupervised learning, unsupervised, pca, cluster]
 ---
 
-oq eu sei até agora é q são regularizações pra penalizar modelos complexos
+Diferente do aprendizado supervisionado em que temos as respostas ou *ground truths* do passado relacionadas ao que estamos tentando prever, o aprendizado não supervisionado vem para responder a pergunta: 
 
+### Como eu faço se eu não tenho as respostas?
 
-tipo na função objetivo se vc só quer minizar vai parar com um modelo complexo bagarai e tal, aí começaram a colocar a complexidade do modelo como restrição pra balancear isso
+![home alone](https://media.giphy.com/media/yYCXPHoEHTn0I/giphy.gif)
 
-essa parte vc sabe
+Nesse caso, temos duas opções:
 
+1. Classificar cada ponto dos nossos dados com o que queremos prever, como "bom" ou "ruim" etc.
+2. Deixar os dados falarem por si só.
 
-l1 e l2 são dois jeitos de fazer isso
+Eu considerdo a opção 1 ruim por alguns motivos:
 
+- Se o for uma quantidade de dados grande dá trabalho.
+- Mesmo que que haja um critério objetivo de classificação podem haver problemas na classificação humana.
+- O custo benefício não vai valer a pena.
 
-l1 é mais barra pesada
+Nesse post vamos discutir sobre a opção 2. Essa opção representa a área de aprendizado de máquina conhecida como [aprendizado não supervisionado](http://scikit-learn.org/stable/unsupervised_learning.html). Nela, basicamente o computador vai olhar para os dados e aprender o que eles dizem sobre si mesmos.
 
-e l2 é mais suave
+## Agrupamento (Clustering)
 
-quanto maior o número desses hiperparametros mais penalidade pra o modelo complexo
+Existem várias técnicas de [agrupamento](http://scikit-learn.org/stable/modules/clustering.html). Elas basicamente agrupam os dados de acordo com sua proximidade no espaço vetorial. Se X está mais perto de Z do que de Y, X e Z pertecerão ao grupo 1 enquanto Y ao grupo 2. É fácil pensar nesse exemplo em apenas uma dimensão:
 
-tipo no xgboost o alpha é o l1 pra peso de leafs
+![one dimensional clustering](https://planspace.org/20150520-practical_mergic/img/one_dimensional.png)
+Fonte: https://planspace.org/20150520-practical_mergic
 
-se vc botar um alpha grande
+A ideia é que os pontos sejam semelhantes aos dentro do mesmo grupo e diferentes dos de outros grupos. Os vários métodos de agrupamento buscam minizar a distância entre os pontos do mesmo grupo maximizando a distância entre os diferentes grupos de várias formas diferentes. Se um post discutindo alguns desses algoritmos lhe interessa deixe um comentário! Quem sabe eu penso no seu caso ;P.
 
-ele vai dar peso 0 pra um bando de leaf
+## Redução de dimensionalidade ([PCA](http://scikit-learn.org/stable/modules/decomposition.html#principal-component-analysis-pca), [FA](http://scikit-learn.org/stable/modules/decomposition.html#factor-analysis))
 
-pq ele vai penalizar o modelo ter muita leaf
+A [redução de dimensionalidade](http://scikit-learn.org/stable/modules/decomposition.html) busca decompor os sinais em componentes. Isso pode ser interessante por vários motivos:
 
-ou ter mt peso de leaf
+1. Caso você queira evitar a [maldição da dimensionalidade](https://en.wikipedia.org/wiki/Curse_of_dimensionality), relevante principalmente em classificação e agrupamento.
+2. Caso você tenha muitas variáveis (features) e um poder de processamento limitado.
+3. Caso você precise deixar suas variáveis ortogonais (sem relação uma com a outra) pra satisfazer a hipótese de um dos seus modelos.
+4. Pra facilitar a interpretação de uma quantiadade grande de dados, criando uma espécie de indicador, no caso da Análise Fatorial (Factor Analysis).
 
-e um modelo com muito peso de leaf é mais complexo
+E aí, o que vocês acham de aprendizado não supervisionado? Tem muitos mais métodos e detalhes a entrar, podemos ir expandindo nisso com o tempo.
 
-
-----------------------------------------
-asta escrever o código a seguir:
-
-
-```python
-import pandas as pd
-
-train = pd.read_csv('train.csv')
-
-from sklearn.model_selection import train_test_split
-
-x_train, x_test, y_train, y_test = train_test_split(train.drop('Survived',
-                                                    axis=1),
-                                                    train['Survived'],
-                                                    test_size=0.3,
-                                                    random_state=42)
-	
-```
-
-Nesse código importamos a biblioteca pandas na primeira linha. Na segunda, pedimos que ela leia o arquivo train.csv e transforme num Data Frame com nome train.
-
-Na terceira linha importamos a função train_test_split do módulo model_selection da biblioteca scikit-learn. Na quarta linha associamos quatro variáveis ao resultado da função.
-
-Você pode olhar a [documentação da função][documentacao do traintest split] para ver os detalhes, mas resumidaemente ela vai dividir o seu DataFrame em duas partes, a de teste e a de treino (já vou explicar pq isso gera 4 dfs). Como você pode ver os dois primeiros parâmetros da função são o dataset sem a coluna de interesse (por isso usamos o .drop que tira a coluna 'Survived') e a coluna de interesse separada do resto dos dados.
-
-Isso é apenas pro scikit entender qual é a coluna de interesse. O que ele vai fazer é dividir seus dados em duas partes: 70% para um treino, 30% para teste. Você pode ajusta isso no parâmetros test_size. Podemos falar mais sobre essas proporções no futuro.
-
-## Não se confunda!
-
-A ordem que escrevemos o código costumava me confundir um pouco sobre o que eu tinha que treinar e o que testar. Nós vamos treinar o x_train usando o y_train, ou seja, vamos falar pro algoritmo q o y_train é a coluna de sobreviventes das pessoas no x_train. Depois vamos dar o predict no y_train, o algoritmo vai predizer quem do y_train morreu ou viveu, e comparar o resultado (y_predicted) com o y_test, que é a "resposta certa" para calcular os scores.
-
-Nos próximos posts falaremos melhor sobre como importar os dados, sobre o desafio do titanic em si, e sobre como treinar e testar modelos de Machine Learning. Até lá!
-
-[documentacao do traintest split]:http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
-[desafio do titanic]:https://www.kaggle.com/c/titanic
+Até mais!
