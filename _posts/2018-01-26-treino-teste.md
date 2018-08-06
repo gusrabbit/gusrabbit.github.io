@@ -1,4 +1,15 @@
 ---
+layout: posts
+title: Treino é treino, teste é teste
+excerpt: "Pra que e por que dividir meu dataset em teste e treino?"
+header:
+  image: /assets/images/treino.jpg
+categories: [intuition]
+tags: [cross validation]
+---
+
+
+---
 layout: post
 title: "Treino é treino, teste é teste"
 date: 2018-02-28 15:00:00 -0300

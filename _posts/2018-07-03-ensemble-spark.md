@@ -1,10 +1,10 @@
 ---
-layout: post
-title: "Ensemble de regressores no Spark"
-date: 2018-07-03 10:00:00 -0300
-description: Como montar um ensemble de regressores no Spark usando a api do Scala.
-img: scala-spark.png
-tags: [aprendizado supervisionado, supervised learning, Scala, Spark, Ensemble]
+title: Ensemble de regressores no Spark
+excerpt: "Como montar um ensemble de regressores no Spark usando a api do Scala."
+header:
+  image: /assets/images/scala-spark.png
+categories: [code]
+tags: [scala, spark, ensemble]
 ---
 
 Vou tentar mostrar como fazer um ensemble de regressores na API de Scala do Spark. O exemplo é quase igual pra PySpark, se quiser que eu faça um post desse é só comentar aqui embaixo ;). Mas antes, alguns conceitos básicos.

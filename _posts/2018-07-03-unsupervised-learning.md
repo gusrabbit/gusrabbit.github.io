@@ -1,10 +1,10 @@
 ---
-layout: post
-title: "Aprendizado não supervisionado"
-date: 2018-07-02 10:00:00 -0300
-description: O que é, qual a diferença do aprendizado supervisionado e alguns exemplos.
-img: unsupervised.jpeg
-tags: [aprendizado não supervisionado, unsupervised learning, unsupervised, pca, cluster]
+title: Aprendizado não supervisionado
+excerpt: "O que é, qual a diferença do aprendizado supervisionado e alguns exemplos."
+header:
+  image: /assets/images/unsupervised.jpeg
+categories: [intuition]
+tags: [unsupervised learning]
 ---
 
 Diferente do aprendizado supervisionado em que temos as respostas ou *ground truths* do passado relacionadas ao que estamos tentando prever, o aprendizado não supervisionado vem para responder a pergunta: 

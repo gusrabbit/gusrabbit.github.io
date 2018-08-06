@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Hello World!"
-date: 2018-01-17 11:00:00 -0300
-description: Primeiro post do blog! Explicando os objetivos e os planos do que está por vir!
-img: hello-world.jpg
-tags: [Planos]
+layout: single
+title: Hello World!
+excerpt: "Primeiro post do blog! Explicando os objetivos e os planos do que está por vir!"
+header:
+  image: /assets/images/hello-world.jpg
+categories: [planos]
+tags: [planos]
 ---
+
 Esse é o primeiro post do meu blog! A ideia é compartilhar e explicar o que eu estou estudando 
 para exercitar o meu entendimento (bem na ideia do [rubber ducking](https://rubberduckdebugging.com/)) 
 e para ajudar quem mais estiver interessado em Ciência dos
